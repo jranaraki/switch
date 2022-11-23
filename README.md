@@ -36,7 +36,28 @@ Current device is nvidia!
 Now reboot the system, and `nvidia-smi` should work and generate an output similar to the followings:
 
 ```
-
+name@name-hostname:~$ nvidia-smi
+Wed Nov 23 12:35:23 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Quadro P1000        Off  | 00000000:01:00.0 Off |                  N/A |
+| N/A   56C    P3    N/A /  N/A |    171MiB /  4096MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      1830      G   /usr/lib/xorg/Xorg                 76MiB |
+|    0   N/A  N/A      2304      G   /usr/bin/gnome-shell               91MiB |
++-----------------------------------------------------------------------------+
 ```
 
 To switch back to the other graphics card, run `switch.sh` again:
